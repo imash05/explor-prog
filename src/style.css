@@ -1,0 +1,306 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(#130725, #263f74);
+    overflow: hidden;
+}/*
+#satuenImage{
+    position: absolute;
+    width: 70%;
+    transform: translate(-20%, -5%);
+    z-index: -5;
+}*/
+/*----- Header -----*/
+.Header{
+    width: 100%;
+    background-color: #1f201f4f;
+    height: 3.4rem;
+    padding: 0px 40px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}.Header a {
+    text-decoration: none;
+    color: #fff;
+}
+.Header p {
+    font-size: small;
+    font-family: monospace;
+    margin-bottom: 5px;
+}
+/*----- main ------*/
+#root{
+    padding-top: 25px;
+    width: 100%;
+    height: 1vh;
+}
+.planet{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    background-color: url(./images/stars.png);
+}
+.pCol1{
+    width: 30%;
+    height: 100%;
+    
+}
+.pCol2{
+    width: 39.99%;
+    height: 100%;
+}
+.pCol3{
+    width: 30%;
+    color: #fff;
+    height: 100%;
+}
+.homeContent > img{
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.homeContentImage{
+    width: 100%;
+}
+.homeContentImage img{
+    width: 100%;
+}
+.homeContentTitle{
+    position: relative;
+}
+.homeContentTitle h1{
+    position: absolute;
+    transform: translate(60%,-370%);
+    font-size: 4.5rem;
+    color: #ffff;
+}
+.planetInfo{
+    width: 100%;
+    height: 100%;
+}
+.planetInfoBox{
+    width: 100%;
+    height: 22%;
+    margin-top: 13px;
+    padding-top: 20px;
+    padding-left: 45px;
+    color: #fff;
+}
+.planetInfoBox:first-child{
+    padding-left: 90px;
+}
+.planetInfoBox:last-child{
+    padding-left: 130px;
+}
+.pibTitle{
+    display: flex;
+    align-items: center;
+}
+.pibContent{
+    width: 100%;
+    padding: 0px 40px;
+    font-size: 0.9rem;
+}
+.planetMinfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.slideNum{
+    width: 100%;
+    padding: 0px 75px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.pmiContent{
+    width: 100%;
+    height: 40%;
+    padding: 0px 75px;
+}
+.nextandprevBtn{
+    margin-top: 15px;
+
+
+
+    
+}
+.nextandprevBtn a{
+    color: #fff;
+    font-size: 1.6rem;
+    text-decoration: none;
+    float: right;
+    margin-right: 65px;
+    font-weight: 700;
+}
+.nextandprevBtn a:hover{
+    text-decoration: underline;
+}
+/*----- Error screen ---*/
+.ErrorScreen{
+    width: 100%;
+    height:30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: #fff;
+}
+/*------ Mobile Version------*/
+
+ @media only screen and (max-width: 600px) {
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    body{
+        background: #130725 ;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .Header{
+        width: 100%;
+        background-color: #1f201f4f;
+        height: 5rem;
+        padding: 0px 40px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }.Header a {
+        text-decoration: none;
+        color: #fff;
+    }
+    .Header p {
+        font-size: 0.6rem;
+        font-family: monospace;
+        margin-bottom: 5px;
+    }
+    #root{
+        padding-top: 15px;
+        width: 100%;
+        height: 1vh;
+    }
+    .planet{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: url(./images/stars.png);
+    }
+    .pCol1{
+        width: 100%;
+        height: 100%;
+    }
+    .pCol2{
+        width: 100%;
+        height: 100%;
+    }
+    .pCol3{
+        width: 100%;
+        color: #fff;
+        height: 100%;
+    }
+    .planetInfo{
+        width: 100%;
+        height: 100%;
+    }
+    .planetInfoBox{
+        width: 100%;
+        height: 15%;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .planetInfoBox:nth-child(2){
+        margin-bottom: 50px;
+    }
+    .planetInfoBox:first-child{
+        padding-left: 80px;
+    }
+    .planetInfoBox:last-child{
+        padding-left: 11s0px;
+    }
+    .pibTitle{
+        display: flex;
+        align-items: center;
+    }
+    .pibContent{
+        width: 100%;
+        padding: 0px 40px;
+        font-size: 0.9rem;
+    }
+    .homeContentTitle{
+        position: relative;
+    }
+    .homeContentTitle h1{
+        position: absolute;
+        transform: translate(30%,-240%);
+        font-size: 4.5rem;
+        color: #ffff;
+
+    }
+    .homeContent > img{
+        position: absolute;
+        z-index: -10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    .nextandprevBtn{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between; 
+        align-items: center;
+        margin-bottom: 50px;
+        width: 100%;
+
+        padding-left: 60px;
+    }
+    .nextandprevBtn a{
+        color: #fff;
+        font-size: 1.5rem;
+        text-decoration: none;
+        float: right;
+        font-weight: 700;
+        display: flex;
+
+    }
+    .planetMinfo{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .slideNum{
+        width: 100%;
+        padding: 0px 45px;
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    .pmiContent{
+        width: 100%;
+        height: 100%;
+        padding: 20px 40px;
+        margin-bottom: 20px;
+    }
+}
