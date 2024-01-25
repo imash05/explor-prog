@@ -1,35 +1,25 @@
-//import Footer from "./components/Footer.js";
-import Header from "./components/Header.js";
-import Error404Screen from "./screens/Error404Screen.js";
-import homeScreen from "./screens/homeScreen.js";
-import jupiterScreen from "./screens/jupiterScreen.js";
-import marsScreen from "./screens/marsScreen.js";
-import saturnScreen from "./screens/saturnScreen.js";
-import { parseRequestUrl } from "./utils.js";
+import logo from './logo.svg';
+import './App.css';
 
-const routes = {
-    "/": homeScreen,
-    "/mars": marsScreen,
-    "/jupiter": jupiterScreen,
-    "/saturn": saturnScreen,
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
-const router = () =>{
-    const request = parseRequestUrl();
-    const parseUrl = (request.resource ? `/${request.resource}`: '/') + 
-    (request.id? '/:id': '') + (request.verb? `/${request.verb}`: ``);
-
-    const screen = routes[parseUrl]? routes[parseUrl]:Error404Screen;
-    marsScreen.after_render();
-    const main = document.getElementById("root");
-    main.innerHTML = screen.render();
-    
-    const header = document.getElementById("header");
-    header.innerHTML = Header.render();
-    //const footer = document.getElementById("footer");
-    //footer.innerHTML = Footer.render();
-}
-
-
-window.addEventListener("load" , router);
-window.addEventListener("hashchange" , router);
+export default App;
