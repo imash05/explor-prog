@@ -1,14 +1,15 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Main from "./sections/main";
+import Home from "./screens/home";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main/>,
+    element: <Home/>,
   },
   {
     path: "/n",
